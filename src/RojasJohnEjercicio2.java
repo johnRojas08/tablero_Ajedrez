@@ -21,9 +21,14 @@ public class RojasJohnEjercicio2 {
             }
         } while (tamaño < 1 || tamaño > 15);
 
-        // Imprimir el patrón ingresado (para probar este paso)
-        System.out.println("El patrón elegido es: " + patron);
-
-        scanner.close();
+        // Imprimir una sola casilla del tamaño definido
+        System.out.println("\nCasilla de ejemplo:");
+        for (int i = 0; i < tamaño; i++) { // Filas de la casillo
+            for (int j = 0; j < tamaño; j++) { // Columnas de la casilla
+                System.out.print(patron);
+            }
+            System.out.println(); // Nueva linea despues de cada fila
         }
+        scanner.close();
     }
+}
