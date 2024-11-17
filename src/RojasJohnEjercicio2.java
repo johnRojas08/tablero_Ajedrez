@@ -21,11 +21,23 @@ public class RojasJohnEjercicio2 {
             }
         } while (tamaño < 1 || tamaño > 15);
 
-        // Imprimir una sola casilla del tamaño definido
-        System.out.println("\nCasilla de ejemplo:");
-        for (int i = 0; i < tamaño; i++) { // Filas de la casillo
-            for (int j = 0; j < tamaño; j++) { // Columnas de la casilla
-                System.out.print(patron);
+        // Imprimir una fila del tablero
+        System.out.println("\nfila de ejemplo:");
+        for (int i = 0; i < tamaño; i++) { // Filas de las casillas
+            for (int columna = 0; columna < 8; columna++) { // 8 Columnas de las casillas
+                if (columna % 2 == 0) {
+                    // casilla blanca (espacios)
+                    for (int j = 0; j < tamaño; j++) {
+                        System.out.print("");
+                    }
+            } else {
+
+                    // casilla negra
+                    for (int j = 0; j < tamaño; j++ ) {
+                        System.out.print(patron);
+                    }
+
+                }
             }
             System.out.println(); // Nueva linea despues de cada fila
         }
