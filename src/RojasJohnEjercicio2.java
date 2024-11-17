@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class RojasJohnEjercicio2 {
+
     public static void main(String[] args) {
 
         // Declarar variables necesarias
@@ -21,26 +22,28 @@ public class RojasJohnEjercicio2 {
             }
         } while (tamaño < 1 || tamaño > 15);
 
-        // Imprimir una fila del tablero
-        System.out.println("\nfila de ejemplo:");
-        for (int i = 0; i < tamaño; i++) { // Filas de las casillas
-            for (int columna = 0; columna < 8; columna++) { // 8 Columnas de las casillas
-                if (columna % 2 == 0) {
-                    // casilla blanca (espacios)
-                    for (int j = 0; j < tamaño; j++) {
-                        System.out.print("");
+        // Imprimir tablero de ajedrez
+        System.out.println("\nTablero de ajedrez:");
+        for (int filas = 0; filas < 8; filas++) { // 8 filas del tablero
+            for (int linea = 0; linea < tamaño; linea++) { // Imprime las líneas de cada fila
+                for (int columnas = 0; columnas < 8; columnas++) { // 8 columnas del tablero
+                    // Determinar si la casilla es blanca o negra
+                    if ((filas + columnas) % 2 == 0) {
+                        // Casilla blanca: espacio vacío
+                        for (int i = 0; i < tamaño; i++) {
+                            System.out.print(" ");
+                        }
+                    } else {
+                        // Casilla negra: imprimir el patrón
+                        for (int i = 0; i < tamaño; i++) {
+                            System.out.print(patron);
+                        }
                     }
-            } else {
-
-                    // casilla negra
-                    for (int j = 0; j < tamaño; j++ ) {
-                        System.out.print(patron);
-                    }
-
                 }
+                System.out.println();
             }
-            System.out.println(); // Nueva linea despues de cada fila
         }
+
         scanner.close();
     }
 }
